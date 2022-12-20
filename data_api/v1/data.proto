@@ -1,0 +1,14 @@
+package data_api.v1;
+
+message InsertRequest {}
+
+message InsertResponse {}
+
+message GetRequest {}
+
+message GetResponse {}
+
+service DataService {
+  rpc Insert(InsertRequest) returns (InsertResponse);
+  rpc Get(GetRequest) returns (GetResponse);
+}
