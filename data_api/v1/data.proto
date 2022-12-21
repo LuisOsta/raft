@@ -1,12 +1,17 @@
+syntax = "proto3";
+
 package data_api.v1;
 
-message InsertRequest {}
+message InsertRequest {
+  string key = 1;
+  string value = 2;
+}
 
 message InsertResponse {}
 
-message GetRequest {}
+message GetRequest { string key = 1; }
 
-message GetResponse {}
+message GetResponse { string value = 2; }
 
 service DataService {
   rpc Insert(InsertRequest) returns (InsertResponse);
