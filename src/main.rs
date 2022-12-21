@@ -1,5 +1,6 @@
 use clap::Parser;
 
+mod consensus_module;
 mod server;
 
 #[tokio::main]

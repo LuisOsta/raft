@@ -7,4 +7,7 @@ pub struct DataServiceConfig {
     /// Listen address
     #[clap(short, long, default_value = DEFAULT_PORT)]
     pub port: String,
+
+    #[clap(short, long)]
+    pub peers: Vec<String>,
 }
