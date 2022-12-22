@@ -93,7 +93,7 @@ impl DataServer<peer_manager::PeerManager> {
 
         let address: std::net::SocketAddr = format!("[::]:{}", config.port).parse()?;
 
-        let peer_manager = peer_manager::PeerManager::new(config.peers);
+        let peer_manager = peer_manager::PeerManager::new(config.peers, config.port);
 
         let consensus_manager = super::consensus_module::ConsensusModule::new(peer_manager);
 
